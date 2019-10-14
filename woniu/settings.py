@@ -88,7 +88,7 @@ DATABASES = {
         'NAME': 'woniu',        #数据库名字
         'USER': 'root',          #账号
         'PASSWORD': 'root',      #密码
-        'HOST': '127.0.0.1',    #IP
+        'HOST': '120.78.157.87',    #IP
         'PORT': '3306',                   #端口
     }
 }
