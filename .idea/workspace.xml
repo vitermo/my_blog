@@ -43,16 +43,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/woniu/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="133" column="55" selection-start-line="133" selection-start-column="55" selection-end-line="133" selection-end-column="55" />
+            <state relative-caret-position="213">
+              <caret line="89" column="29" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uwsgi.ini">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="114">
@@ -154,8 +154,8 @@
         <option value="$PROJECT_DIR$/templates/detail.html" />
         <option value="$PROJECT_DIR$/comment/urls.py" />
         <option value="$PROJECT_DIR$/comment/views.py" />
-        <option value="$PROJECT_DIR$/woniu/settings.py" />
         <option value="$PROJECT_DIR$/uwsgi.ini" />
+        <option value="$PROJECT_DIR$/woniu/settings.py" />
       </list>
     </option>
   </component>
@@ -195,6 +195,11 @@
           <expand>
             <path>
               <item name="woniu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="woniu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="woniu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="woniu" type="462c0819:PsiDirectoryNode" />
               <item name="woniu" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -278,12 +283,12 @@
       <option name="presentableId" value="Default" />
       <updated>1570954736637</updated>
       <workItem from="1570954739803" duration="18717000" />
-      <workItem from="1571025598795" duration="11154000" />
+      <workItem from="1571025598795" duration="11616000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29871000" />
+    <option name="totallyTimeSpent" value="30333000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="386" y="76" width="1021" height="797" extended-state="0" />
@@ -646,17 +651,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/woniu/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="133" column="55" selection-start-line="133" selection-start-column="55" selection-end-line="133" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/uwsgi.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/woniu/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="89" column="29" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
         </state>
       </provider>
     </entry>
