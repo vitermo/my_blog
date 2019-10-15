@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'w1wv&nfy=6mtcuq-ntz3)zsxvy$thsyy2-9c&u%npb5rqe#@gu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','120.78.157.87']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -86,10 +86,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'woniu',        #数据库名字
-        'USER': 'blog',          #账号
-        'PASSWORD': '12345678',      #密码
+        'USER': 'root',          #账号
+        'PASSWORD': 'root',      #密码
         'HOST': '127.0.0.1',    #IP
-        'PORT': '3306',                 #端口
+        'PORT': '3306',                   #端口
     }
 }
 
@@ -131,7 +131,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'collected_static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
