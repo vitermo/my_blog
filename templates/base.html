@@ -28,7 +28,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="my-nav">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/blog/">博客</a></li>
+        <li class="active"><a href="{% url 'blog_index' %}">博客</a></li>
         <li ><a href="#">学习资源</a></li>
         <li ><a href="#">联系我</a></li>
       </ul>
@@ -41,7 +41,21 @@
       </form>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">登录</a></li>
+          {% if user.is_authenticated %}
+                    <a href="#" class="authenticated-box">{{ user.username }}</a>
+                    <div class="user-more-box">
+                        <i class="triangle"></i>
+{#                        {% if user.is_staff %}#}
+{#                            <a href="#">管理系统</a>#}
+{#                        {% endif %}#}
+{#                        var id = {{ user.id }}#}
+                        <a href="{% url 'blog_auth:delete' user.id%}">删除用户</a>
+                        <a href="{% url 'blog_auth:logout' %}">退出登录</a>
+                    </div>
+          {% else %}
+              <li><a href="{% url 'blog_auth:login' %}">登录</a></li>
+              <li><a href="{% url 'blog_auth:register' %}">注册</a></li>
+          {% endif %}
       </ul>
 
     </div><!-- /.navbar-collapse -->
@@ -62,7 +76,7 @@
                                <li><a href="#">联系我们</a></li>
                                <li><a href="#">关于博主</a></li>
                                <li><a href="#">文档支持</a></li>
-                               <li><a href="/blog/">博客首页</a></li>
+                               <li><a href="#">博客首页</a></li>
                 </ul>
                 <p>Copyright © 2018 一只蠢🐌 </p>
 

@@ -1,3 +1,5 @@
-from django.test import TestCase
+from django.core.paginator import Paginator
 
-# Create your tests here.
+objects = ['john', 'paul', 'george', 'ringo']
+p = Paginator(objects, 1)
+print(p.page_range)

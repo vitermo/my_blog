@@ -34,6 +34,7 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('latest/feed/', LatestEntriesFeed()),
     path('comment/',include('comment.urls')),
+    path('blog_auth/',include('blog_auth.urls')),
     re_path(r'^sitemap\.xml$', sitemap, {'sitemaps': {'blog': GenericSitemap(info_dict, priority=0.6)}},
       name='django.contrib.sitemaps.views.sitemap'),
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)  #添加图片的url

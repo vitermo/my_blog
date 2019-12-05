@@ -1,10 +1,11 @@
 from django.shortcuts import render,get_object_or_404
 from .models import Entry,Tag,Category
+from django.http import HttpResponse
 import markdown
 from comment.models import Comment
 from comment.forms import CommentForm
 from django.db.models import Q
-from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
+from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger,InvalidPage
 
 # def index(request):
 #     # 不懂...  不加locals()前端接收不到数据，注意查看
@@ -43,14 +44,22 @@ def detail(request,blog_id):
     return render(request, 'detail.html', context)
 
 ## 分页功能实现，下面都是，现在不懂，先弄好再说
-def make_paginator(objects, page, num=3):
-    paginator = Paginator(objects, num)
+def make_paginator(objects, page):
+    paginator = Paginator(objects, 3)
     try:
+        # 获取 url 后面的 page 参数的值, 首页不显示 page 参数, 默认值是 1
         object_list = paginator.page(page)
+        # todo: 注意捕获异常
     except PageNotAnInteger:
+        # 如果请求的页数不是整数, 返回第一页。
         object_list = paginator.page(1)
     except EmptyPage:
+        # 如果请求的页数不在合法的页数范围内，返回结果的最后一页。
         object_list = paginator.page(paginator.num_pages)
+    except InvalidPage:
+        # 如果请求的页数不存在, 重定向页面
+        return HttpResponse('找不到页面的内容')
+
     return object_list, paginator
 
 def pagination_data(paginator, page):
@@ -165,6 +174,12 @@ def index(request):
     page = request.GET.get('page', 1)
     entry_list, paginator = make_paginator(entries, page)
     page_data = pagination_data(paginator, page)
+
+    # context = {
+    #     'entry_list':entry_list,
+    #     'paginator':paginator,
+    #     'page_data':page_data
+    # }
 
     return render(request, 'index.html', locals())
 

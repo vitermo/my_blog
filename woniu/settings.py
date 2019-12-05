@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'blog',
     'django.contrib.sitemaps',
     'comment',
+    'blog_auth',
+    'captcha',
 
 ]
 
@@ -86,8 +88,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'woniu',        #数据库名字
-        'USER': 'blog',          #账号
-        'PASSWORD': '12345678',      #密码
+        'USER': 'root',          #账号
+        'PASSWORD': 'root',      #密码
         'HOST': '127.0.0.1',    #IP
         'PORT': '3306',                   #端口
     }
