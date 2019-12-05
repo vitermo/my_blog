@@ -7,14 +7,8 @@ from comment.forms import CommentForm
 from django.db.models import Q
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger,InvalidPage
 
-# def index(request):
-#     # 不懂...  不加locals()前端接收不到数据，注意查看
-#     entries = models.Entry.objects.all()
-#     return render(request,'index.html',locals())
-
-
 def detail(request,blog_id):
-    # 不懂...
+
     # entry = models.Entry.objects.get(id=blog_id)
     entry = get_object_or_404(Entry, id=blog_id)
 
@@ -43,7 +37,7 @@ def detail(request,blog_id):
 
     return render(request, 'detail.html', context)
 
-## 分页功能实现，下面都是，现在不懂，先弄好再说
+## 分页功能实现
 def make_paginator(objects, page):
     paginator = Paginator(objects, 3)
     try:
