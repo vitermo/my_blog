@@ -1,7 +1,7 @@
 Django==2.2.5
 django-contrib-comments==1.9.1
 Markdown==3.1.1
-Pillow==6.2.0
+Pillow==9.0.1
 Pygments==2.4.2
 PyMySQL==0.9.3
 pytz==2019.2
